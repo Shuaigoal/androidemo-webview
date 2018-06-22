@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+<div align="center">
+    <a><h1>JS中调用本地方法</h1></a>
+</div>
+<script>
+        function sayHello()
+        {
+             alert("Hello")
+         }
+		<!--通过回调的方式传递数据 --!> 
+        function getContent(){
+            android.content(
+            "{\"name\":\""+document.getElementById("name").value+"\","
+            +"\"gender\":\""+document.getElementById("gender").value+"\"}"
+            );
+        }
+        function alertName()
+        {
+            alert(document.getElementById("name").value);
+        }
+
+        function getName(){
+            return "{\"name\":\""+document.getElementById("name").value+"\"}";
+        }
+         var aTag = document.getElementsByTagName('a')[0];
+         aTag.addEventListener('click', 
+			function(){
+				android.content("js中调用本地方法"
+	            +document.getElementById("name").value
+	            +document.getElementById("gender").value);
+            return false;
+          }, false);
+</script>
+<br>
+<br>
+<div align="center">
+    <label>姓名</label><input  id="name" type="text" name="name"/>
+</div>
+<br>
+<br>
+<div align="center">
+    <label>性别</label><input  id="gender" type="text" name="gender"/>
+</div>
+<br>
+<br>
+<div align="center">
+    <button type="button" id="button" onclick="alertName()">JS测试姓名输入内容</button>
+</div>
+</body>
+</html>
